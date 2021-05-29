@@ -1,4 +1,4 @@
-import DrawerInitiator from './scripts/utils/drawer-init';
+import DrawerInitiator from './utils/drawer-init';
 
 class App {
     constructor({
