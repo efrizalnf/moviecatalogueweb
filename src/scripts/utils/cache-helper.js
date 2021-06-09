@@ -1,7 +1,8 @@
 // import {
 //     cache
 // } from "webpack";
-// import CONFIG from "../globals/config";
+
+import CONFIG from "../globals/config";
 
 const CacheHelper = {
     async cachingAppShell(requests) {
