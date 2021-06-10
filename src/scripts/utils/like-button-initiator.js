@@ -40,6 +40,7 @@ const LikeButtonInitiator = {
             await FavoriteMovieIdb.putMovie(this._movie);
             this._renderButton();
         });
+        console.log("like it : ")
     },
 
     _renderLiked() {
@@ -50,6 +51,7 @@ const LikeButtonInitiator = {
             await FavoriteMovieIdb.deleteMovie(this._movie.id);
             this._renderButton();
         });
+        console.log("unlike it : ")
     },
 };
 
