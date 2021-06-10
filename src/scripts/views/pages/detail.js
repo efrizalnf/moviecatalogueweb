@@ -24,16 +24,16 @@ const Detail = {
         likeButtonContainer.innerHTML =  createLikeButtonTemplate();
 
         // panggil fav button initiator
-        // LikeButtonInitiator.init({
-        //     likeButtonContainer: document.querySelector('#likeButtonContainer'),
-        //     movie: {
-        //         id: movie.id,
-        //         title: movie.title,
-        //         overview: movie.overview,
-        //         backdrop_path: movie.backdrop_path,
-        //         vote_average: movie.vote_average,
-        //     },
-        // });
+        LikeButtonInitiator.init({
+            likeButtonContainer: document.querySelector('#likeButtonContainer'),
+            movie: {
+                id: movie.id,
+                title: movie.title,
+                overview: movie.overview,
+                backdrop_path: movie.backdrop_path,
+                vote_average: movie.vote_average,
+            },
+        });
     },
 };
 

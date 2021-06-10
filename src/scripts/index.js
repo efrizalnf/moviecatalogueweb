@@ -1,5 +1,4 @@
 import 'regenerator-runtime';
-import * as idb from 'idb';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import App from '../scripts/app.js';

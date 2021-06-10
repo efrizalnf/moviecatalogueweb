@@ -1,7 +1,4 @@
-// import {
-//     cache
-// } from "webpack";
-
+// import { cache } from "webpack";
 import CONFIG from "../globals/config";
 
 
@@ -9,8 +6,8 @@ import CONFIG from "../globals/config";
 const CacheHelper = {
     async cachingAppShell(requests) {
         // buat cache open cache
-        const cache = await this._openCache();
-        cache.addAll(requests);
+        const cachess = await this._openCache();
+        cachess.addAll(requests);
     },
 
     async deleteOldCache() {
@@ -18,7 +15,7 @@ const CacheHelper = {
         const cacheNames = await cache.keys();
         cacheNames
             .filter((name) => name !== CONFIG.CACHE_NAME)
-            .map((filteredName) => caches.delete(filteredName));
+            .map((filteredName) => cache.delete(filteredName));
     },
 
     // Fecth request ke dalam cache
@@ -35,14 +32,14 @@ const CacheHelper = {
 
 
     async _addCache(request) {
-        const cache = await this._openCache();
-        cache.add(request);
+        const caches = await this._openCache();
+        caches.add(request);
     },
 
     // revalidasi cache
 
     async revalidateCache(request) {
-        const response = await caches.match(request);
+        const response = await cache.match(request);
 
         if (response) {
             this._fetchRequest(request);
@@ -52,7 +49,7 @@ const CacheHelper = {
     },
 
     async _openCache() {
-        return caches.open(CONFIG.CACHE_NAME);
+        return cache.open(CONFIG.CACHE_NAME);
     },
 };
 
