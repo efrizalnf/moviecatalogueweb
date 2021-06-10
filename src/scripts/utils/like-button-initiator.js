@@ -1,4 +1,4 @@
-import FavoriteMovieIdb from '../data/favorite-movie-idb';
+import FavoriteMovieIdb from '../data/favouritemovie-idb';
 import {
     createLikeButtonTemplate,
     createLikedButtonTemplate

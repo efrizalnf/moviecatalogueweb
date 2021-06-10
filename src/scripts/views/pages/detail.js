@@ -20,21 +20,20 @@ const Detail = {
         const movieContainer = document.querySelector('#movie');
         movieContainer.innerHTML = createMovieDetailTemplate(movie);
 
-        // const likeButtonContainer =  document.querySelector('#likeButtonContainer');
-        // likeButtonContainer.innerHTML =  createLikeButtonTemplate();
+        const likeButtonContainer =  document.querySelector('#likeButtonContainer');
+        likeButtonContainer.innerHTML =  createLikeButtonTemplate();
 
         // panggil fav button initiator
-        LikeButtonInitiator.init({
-            likeButtonContainer: document.querySelector('#likeButtonContainer'),
-            movie: {
-                id: movie.id,
-                title: movie.title,
-                overview: movie.overview,
-                backdrop_path: movie.backdrop_path,
-                vote_average: movie.vote_average,
-            },
-
-        })
+        // LikeButtonInitiator.init({
+        //     likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        //     movie: {
+        //         id: movie.id,
+        //         title: movie.title,
+        //         overview: movie.overview,
+        //         backdrop_path: movie.backdrop_path,
+        //         vote_average: movie.vote_average,
+        //     },
+        // });
     },
 };
 
