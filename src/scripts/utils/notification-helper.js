@@ -14,6 +14,11 @@ const NotificationHelper = {
             this._requestPermission();
             return;
         }
+
+        this._showNotification({
+            title,
+            option
+        });
     },
 
 
