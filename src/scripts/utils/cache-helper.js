@@ -1,4 +1,4 @@
-// import { cache } from "webpack";
+
 import CONFIG from "../globals/config";
 
 
@@ -12,10 +12,10 @@ const CacheHelper = {
 
     async deleteOldCache() {
         // hapus cache lama
-        const cacheNames = await cache.keys();
+        const cacheNames = await caches.keys();
         cacheNames
             .filter((name) => name !== CONFIG.CACHE_NAME)
-            .map((filteredName) => cache.delete(filteredName));
+            .map((filteredName) => caches.delete(filteredName));
     },
 
     // Fecth request ke dalam cache
